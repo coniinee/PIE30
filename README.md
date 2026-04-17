@@ -1,7 +1,8 @@
 # Voix
 
-> **Note sur les dépendances de compilation**
-> Ce dépôt **n’est pas une archive JUCE entièrement autonome**. Le code source, le fichier `CMakeLists.txt` et le projet `.jucer` sont inclus, mais **le framework JUCE lui-même n’est pas intégré dans cette archive**. Pour compiler le projet, vous devez soit :
+> **Note sur les dépendances de compilation**  
+> Ce dépôt **n’est pas une archive JUCE entièrement autonome**. Le code source, le fichier `CMakeLists.txt` et le projet `.jucer` sont inclus, mais **le framework JUCE lui-même n’est pas intégré dans cette archive**.  
+> Pour compiler le projet, vous devez soit :
 > - installer JUCE localement et pointer la compilation vers cette installation ;
 > - soit ajouter JUCE comme dépendance ou sous-module dans votre environnement local.
 
@@ -156,6 +157,9 @@ Scènes graphiques personnalisées recevant des données simplifiées depuis `Ma
 #### `SceneChrome`
 Couche utilitaire partagée pour les cartes, badges, barres de progression et overlays.
 
+#### `Utf8Text`
+Petit utilitaire de texte UTF-8 utilisé pour garantir l’affichage correct des chaînes accentuées et des caractères multilingues dans l’interface.
+
 ---
 
 ## Déroulement à l’exécution
@@ -257,22 +261,29 @@ L’interface est divisée en deux zones :
 ## Structure du dépôt
 
 ```text
-Voix/
+PIE30/
+├── .gitignore
 ├── CMakeLists.txt
 ├── GuideDuJeu.md
 ├── README.md
 ├── Voix.jucer
-├── .gitignore
 └── Source/
-    ├── Main.cpp
-    ├── MainComponent.h / .cpp
-    ├── AudioAnalyzer.h / .cpp
+    ├── AudioAnalyzer.cpp
+    ├── AudioAnalyzer.h
+    ├── ButterflyScene.cpp
+    ├── ButterflyScene.h
     ├── GameSession.h
-    ├── SettingsPanel.h / .cpp
+    ├── Main.cpp
+    ├── MainComponent.cpp
+    ├── MainComponent.h
     ├── SceneChrome.h
-    ├── TreeScene.h / .cpp
-    ├── WindmillScene.h / .cpp
-    └── ButterflyScene.h / .cpp
+    ├── SettingsPanel.cpp
+    ├── SettingsPanel.h
+    ├── TreeScene.cpp
+    ├── TreeScene.h
+    ├── Utf8Text.h
+    ├── WindmillScene.cpp
+    └── WindmillScene.h
 ```
 
 ---
@@ -283,7 +294,13 @@ Voix/
 1. Installez JUCE localement.
 2. Ouvrez `Voix.jucer` dans Projucer.
 3. Vérifiez la configuration des modules JUCE et des exporters.
-4. Générez puis ouvrez le projet dans Xcode ou Visual Studio.
+4. Générez puis ouvrez le projet dans l’IDE correspondant.
+
+**Remarque importante :**
+- le fichier `.jucer` fourni contient déjà un exporter **Xcode (macOS)** ;
+- si vous souhaitez utiliser **Projucer sous Windows**, vous devrez **ajouter manuellement un exporter Visual Studio** avant de générer le projet ;
+- sur Windows, vous pouvez aussi utiliser directement la méthode **CMake** ci-dessous.
+
 5. Compilez la cible de l’application.
 
 ### Avec CMake
@@ -319,6 +336,7 @@ cmake --build . --config Release
 
 ### Windows
 - Vérifiez le périphérique d’entrée par défaut.
+- Si vous utilisez Projucer, pensez à ajouter un exporter Visual Studio.
 - Utilisez une version de Visual Studio compatible avec JUCE.
 
 ### Linux

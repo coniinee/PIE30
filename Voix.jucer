@@ -45,7 +45,7 @@
   </MODULES>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
   <EXPORTFORMATS>
-    <XCODE_MAC targetFolder="Builds/MacOSX" microphonePermissionNeeded="1" microphonePermissionsText="This app uses the microphone to detect vocalisations for speech therapy training.">
+    <XCODE_MAC targetFolder="Builds/MacOSX" microphonePermissionNeeded="1" microphonePermissionsText="Cette application utilise le microphone pour d&#233;tecter les vocalisations dans le cadre d&#8217;exercices d&#8217;orthophonie.">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="1" name="Debug" targetName="Voix"/>
         <CONFIGURATION isDebug="0" name="Release" targetName="Voix"/>
