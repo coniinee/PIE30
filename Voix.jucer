@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="BcEtCi" name="Voix" projectType="guiapp" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
+  <MAINGROUP id="nnajoQ" name="Voix">
+    <GROUP id="{2955AA94-7591-D388-B96D-F6EB350D3E2E}" name="Source">
+      <FILE id="jMIcGQ" name="SettingsPanel.cpp" compile="1" resource="0"
+            file="Source/SettingsPanel.cpp"/>
+      <FILE id="r6mHZ6" name="TreeScene.cpp" compile="1" resource="0" file="Source/TreeScene.cpp"/>
+      <FILE id="wmCPP1" name="WindmillScene.cpp" compile="1" resource="0"
+            file="Source/WindmillScene.cpp"/>
+      <FILE id="btfCPP" name="ButterflyScene.cpp" compile="1" resource="0"
+            file="Source/ButterflyScene.cpp"/>
+      <FILE id="LffZB5" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+      <FILE id="YSGJJZ" name="AudioAnalyzer.cpp" compile="1" resource="0"
+            file="Source/AudioAnalyzer.cpp"/>
+      <FILE id="w4ohOs" name="AudioAnalyzer.h" compile="0" resource="0" file="Source/AudioAnalyzer.h"/>
+      <FILE id="u986dX" name="GameSession.h" compile="0" resource="0" file="Source/GameSession.h"/>
+      <FILE id="xSKopN" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="M3zoBL" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="ttxfff" name="SettingsPanel.h" compile="0" resource="0" file="Source/SettingsPanel.h"/>
+      <FILE id="ScnChr" name="SceneChrome.h" compile="0" resource="0" file="Source/SceneChrome.h"/>
+      <FILE id="YWVivK" name="TreeScene.h" compile="0" resource="0" file="Source/TreeScene.h"/>
+      <FILE id="wmHDR1" name="WindmillScene.h" compile="0" resource="0" file="Source/WindmillScene.h"/>
+      <FILE id="btfHDR" name="ButterflyScene.h" compile="0" resource="0"
+            file="Source/ButterflyScene.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors_headless" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX" microphonePermissionNeeded="1" microphonePermissionsText="This app uses the microphone to detect vocalisations for speech therapy training.">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Voix"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Voix"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../modules"/>
+        <MODULEPATH id="juce_core" path="../modules"/>
+        <MODULEPATH id="juce_data_structures" path="../modules"/>
+        <MODULEPATH id="juce_dsp" path="../modules"/>
+        <MODULEPATH id="juce_events" path="../modules"/>
+        <MODULEPATH id="juce_graphics" path="../modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../modules"/>
+        <MODULEPATH id="juce_audio_processors_headless" path="../modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+</JUCERPROJECT>

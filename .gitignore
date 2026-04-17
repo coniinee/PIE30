@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+__MACOSX/
+
+# Projucer-generated files
+Builds/
+JuceLibraryCode/
+
+# CMake / build outputs
+build/
+cmake-build*/
+out/
+bin/
+
+# IDE settings
+.vscode/
+.idea/
+*.user
+*.suo
+*.opensdf
+*.sdf
+
+# Xcode user data
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# Visual Studio generated folders
+.vs/
+
+# Binary artifacts
+*.app
+*.exe
+*.dll
+*.so
+*.dylib
